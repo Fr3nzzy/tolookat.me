@@ -1,0 +1,84 @@
+@font-face {
+  .font-face('Open Sans', ~'../../fonts/OpenSans-Regular', normal, normal);
+}
+
+html, body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: @base-font-size;
+  color: @base-text-color;
+  min-width: 980px;
+}
+
+html, body, .main-wrapper {
+  height: 100%;
+}
+
+* html .main-wrapper {
+  height: 55%;
+}
+
+small {
+  font-size: @small-font-size;
+}
+
+.aside {
+  float: left;
+}
+
+.aside-right {
+  float: right;
+}
+
+body > .main-wrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+.main-wrapper {
+  text-align: left;
+}
+
+.content {
+  height: auto;
+  min-height: 100%;
+  padding: 0 0 170px;
+}
+
+.article {
+  width: 980px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.footer {
+  clear: both;
+  height: 170px;
+  margin-top: -85px;
+  background: #f4f4f4;
+  color: @footer-color;
+  font-size: 12px;
+}
+
+.footer-wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.footer a {
+  color: @footer-color;
+  text-decoration: none;
+}
+
+.footer .copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  width: 100%;
+  border-top: 1px solid #d6d6d6;
+}
+
+.footer .copyright span {
+  display: block;
+  width: 130px;
+  margin: 0 auto;
+}
