@@ -46,6 +46,7 @@ window.onload = function() {
 
 		scroller = new IScroll( document.body, {
 			mouseWheel: true,
+            interactiveScrollbars: true,
 			scrollbars: true,
 			probeType: 3
 		} );
