@@ -1,8 +1,8 @@
 function generate(canvas, width, height) {
     var x0, y0, w, h;
-    var numRects = 12;
+    var numRects = 7;
     var alphaVariation;
-    var angleVariation = Math.PI/16;
+    var angleVariation = Math.PI/32;
     var r,g,b,baseAlpha;
     var gradRad;
     var xMid,yMid;
@@ -24,13 +24,13 @@ function generate(canvas, width, height) {
     for (var i = 0; i < numRects; i++) {
 
         //random color
-        r = Math.floor(150, Math.random()*255);
-        g = Math.floor(150, Math.random()*255);
-        b = Math.floor(150, Math.random()*255);
+        r = Math.floor(Math.random()*255);
+        g = Math.floor(Math.random()*255);
+        b = Math.floor(Math.random()*255);
         baseAlpha = 0;
         alphaVariation = 2/numRects;
 
-        context.globalCompositeOperation = "lighter";
+        context.globalCompositeOperation = "darker";
 
         gradRad = 1.1*h/2;
         gradIterates = 8;
