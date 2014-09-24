@@ -17,7 +17,8 @@ function generate(canvas, width, height) {
     w = width;
     h = height;
 
-    console.log(w, h);
+    context.imageSmoothingEnabled = true;
+
     xMid = x0 + w/2;
     yMid = y0 + h/2;
 
