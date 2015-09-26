@@ -5,6 +5,7 @@ var minifyCSS = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var defaultTask = ['compile-css'];
+var del = require('del');
 
 gulp.task('compile-css', ['clean:css'], function() {
   return gulp.src(['styles/less/tolookatme.less'])
