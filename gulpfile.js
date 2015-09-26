@@ -1,11 +1,10 @@
-var fs = require('fs');
+var fs = require('fs-extra');
 var gulp = require('gulp');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var defaultTask = ['compile-css'];
-var del = require('del');
 var path = require('path');
 
 gulp.task('compile-css', ['clean:css'], function() {
@@ -31,9 +30,7 @@ gulp.task('minify-css', ['clean:css'], function() {
 });
 
 gulp.task('clean:css', function(cb) {
-  del([
-    'styles/css/**/*'
-  ], cb);
+  fs.emptyDir('styles/css/', cb);
 });
 
 gulp.task('build', ['minify-css']);
